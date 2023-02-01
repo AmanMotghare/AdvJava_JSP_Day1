@@ -38,19 +38,19 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
 		int FirstNumber = Integer.parseInt(First);
 		int SecondNumber = Integer.parseInt(Second);
 
-		if(operation.equals("+")){
+		if(operation.equals("Add")){
 			total = FirstNumber + SecondNumber;
 			operation_name = "Addition";
 		}
-		else if(operation.equals("-")){
+		else if(operation.equals("Subtract")){
 			total = FirstNumber - SecondNumber;
-			operation_name = "Substraction";
+			operation_name = "Subtraction";
 		}
-		else if(operation.equals("/")){
-			total = FirstNumber % SecondNumber;
+		else if(operation.equals("Divide")){
+			total = FirstNumber / SecondNumber;
 			operation_name = "Division";
 		}
-		else if(operation.equals("*")){
+		else if(operation.equals("Multiply")){
 			total = FirstNumber * SecondNumber;
 			operation_name = "Multiplication";
 		}
@@ -67,8 +67,9 @@ integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLAS
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"> R	E S U L T </p>
-               		<h4 class = "container"><%=operation_name %> of <%= FirstNumber%> and <%=SecondNumber %> is : <%= total%> </h4>
+                <p class="text-center h1 fw-bold mb-2 mx-1 mx-md-2 mt-4"> R	E S U L T </p><hr>
+               		<div class = "text-center card-body"><h4>Operation Performed : <b><%=operation_name %></b></h4></div>
+               		<div class = "text-center card-body"><h5>Your Answer is:  <%= total%> </h5></div><hr>
               </div>
             </div>
           </div>
